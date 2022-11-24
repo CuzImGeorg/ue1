@@ -7,11 +7,12 @@ public class Emploee {
     private String name, role;
     private Date insertTime;
 
-    public Emploee() {
-
-
+    public Emploee(int id, String name, String role, Date insertTime) {
+        this.id = id;
+        this.name = name;
+        this.role = role;
+        this.insertTime = insertTime;
     }
-
 
     public int getId() {
         return id;
