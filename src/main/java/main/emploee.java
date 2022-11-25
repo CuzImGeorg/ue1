@@ -2,16 +2,19 @@ package main;
 
 import java.util.Date;
 
-public class Emploee {
+public class emploee {
     private int id;
     private String name, role;
     private Date insertTime;
 
-    public Emploee(int id, String name, String role, Date insertTime) {
+    public emploee(int id, String name, String role, Date insertTime) {
         this.id = id;
         this.name = name;
         this.role = role;
         this.insertTime = insertTime;
+    }
+    public emploee(){
+
     }
 
     public int getId() {
@@ -38,11 +41,11 @@ public class Emploee {
         this.role = role;
     }
 
-    public Date getDate() {
+    public Date getInsertTime() {
         return insertTime;
     }
 
-    public void setDate(Date date) {
+    public void setInsertTime(Date date) {
         this.insertTime = date;
     }
 }

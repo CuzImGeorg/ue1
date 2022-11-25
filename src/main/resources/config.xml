@@ -5,7 +5,7 @@
 <hibernate-configuration>
     <session-factory>
         <!-- Database connection properties - Driver, URL, user, password -->
-        <property name="hibernate.connection.driver_class">org.postgresql.jdbc</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
         <property name="hibernate.connection.url">jdbc:postgresql://localhost/büro</property>
         <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.connection.password">adm</property>
@@ -19,5 +19,6 @@
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
         <!-- mapping file, we can use Bean annotations too -->
         <mapping resource="emploee.xml" />
+        <mapping resource="projekt.xml" />
     </session-factory>
 </hibernate-configuration>

@@ -10,6 +10,7 @@ public class HibernateUtil {
 
     private static SessionFactory buildSessionFactory() {
 
+        try {
             Configuration configuration = new Configuration();
             configuration.configure("config.xml");
             System.out.println("Hibernate Configuration loaded");
@@ -19,13 +20,16 @@ public class HibernateUtil {
 
             sessionFactory = configuration.buildSessionFactory(serviceRegistry);
 
-            return sessionFactory;
+        } catch (Exception ignore) {
+
+        }
+        return sessionFactory;
 
 
     }
 
     public static SessionFactory getSessionFactory() {
-        if(sessionFactory == null) sessionFactory = buildSessionFactory();
+        if(sessionFactory == null || sessionFactory.isClosed()) sessionFactory = buildSessionFactory();
         return sessionFactory;
     }
 
