@@ -3,17 +3,17 @@
         "https://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class name="main.Cart" table="CART">
-        <id name="cart_id" type="int">
+        <id name="cart_id" type="java.lang.Integer">
             <column name="cart_id" />
             <generator class="increment"/>
         </id>
         <property name="name" type="java.lang.String">
-            <column name="name" />
+            <column name="NAME" />
         </property>
         <property name="total" type="double">
             <column name="total" />
         </property>
-        <set name="itemSet" table="Items" fetch="select">
+        <set name="itemSet" table="ITEMS" fetch="select">
             <key>
                 <column name="cart_id" not-null="true"/>
             </key>

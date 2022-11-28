@@ -1,7 +1,8 @@
 package main;
 
 public class Item {
-    private int id,  quantity;
+    private int id;
+    private double quantity;
     private Cart cart_id;
     private double item_total;
     private String item_id;
@@ -45,7 +46,7 @@ public class Item {
         this.cart_id = cart_id;
     }
 
-    public int getQuantity() {
+    public double getQuantity() {
         return quantity;
     }
 

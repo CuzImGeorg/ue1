@@ -9,7 +9,7 @@
         <property name="hibernate.connection.url">jdbc:postgresql://localhost/büro</property>
         <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.connection.password">adm</property>
-        <property name="hibernate.connection.pool_size">1</property>
+        <property name="hibernate.connection.pool_size">10</property>
         <property name="hibernate.current_session_context_class">thread</property>
 
         <property name="hibernate.show_sql">true</property>

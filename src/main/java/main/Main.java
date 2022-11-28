@@ -11,12 +11,11 @@ public class Main {
 
 
     public static void main(String[] args) {
-        emploee e = new emploee(0, "hello", "rule", new Date());
-        Projekt p = new Projekt(100, "p1");
+
         Cart c = new Cart();
         c.setName("Cart1");
-        c.setTotal(2.5);
-
+        c.setTotal(25.7);
+        c.setCart_id(10);
 
         Item i1 = new Item();
         i1.setItem_id("Item1");
@@ -38,16 +37,16 @@ public class Main {
 
          Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 //        //start transaction
-//        session.beginTransaction();
-//        session.save(c);
-//        session.save(i1);
-//        session.save(i2);
+        session.beginTransaction();
+        session.save(c);
+        session.save(i1);
+        session.save(i2);
+
+        session.getTransaction().commit();
 //
-//        session.getTransaction().commit();
 //
 //
-//
-//        HibernateUtil.getSessionFactory().close();
+      HibernateUtil.getSessionFactory().close();
 //        System.out.println(c.getName());
 //
 
