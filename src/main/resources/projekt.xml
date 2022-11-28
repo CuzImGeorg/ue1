@@ -5,7 +5,7 @@
     <class name="main.Projekt" table="projekt">
         <id name="id" type="int">
             <column name="ID" />
-
+            <generator class="increment"/>
         </id>
         <property name="name" type="java.lang.String">
             <column name="NAME" />

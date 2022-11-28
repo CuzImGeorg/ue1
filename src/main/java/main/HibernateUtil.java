@@ -21,7 +21,7 @@ public class HibernateUtil {
             sessionFactory = configuration.buildSessionFactory(serviceRegistry);
 
         } catch (Exception ignore) {
-
+            System.out.println(ignore.getMessage());
         }
         return sessionFactory;
 

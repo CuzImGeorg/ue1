@@ -10,7 +10,6 @@
         <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.connection.password">adm</property>
         <property name="hibernate.connection.pool_size">1</property>
-
         <property name="hibernate.current_session_context_class">thread</property>
 
         <property name="hibernate.show_sql">true</property>
@@ -18,7 +17,8 @@
 
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
         <!-- mapping file, we can use Bean annotations too -->
-        <mapping resource="emploee.xml" />
-        <mapping resource="projekt.xml" />
+
+        <mapping resource="cart.xml" />
+        <mapping resource="item.xml" />
     </session-factory>
 </hibernate-configuration>

@@ -1,7 +1,8 @@
 package main;
 
 public class Item {
-    private int id, cart_id, quantity;
+    private int id,  quantity;
+    private Cart cart_id;
     private double item_total;
     private String item_id;
 
@@ -10,8 +11,12 @@ public class Item {
         return id;
     }
 
+    public  Item() {
 
-    public Item(int id, int cart_id, int quantity, double item_total, String item_id) {
+    }
+
+
+    public Item(int id, Cart cart_id, int quantity, double item_total, String item_id) {
         this.id = id;
         this.cart_id = cart_id;
         this.quantity = quantity;
@@ -19,19 +24,24 @@ public class Item {
         this.item_id = item_id;
     }
 
-    public  Item() {
-
+    public Item( Cart cart_id, int quantity, double item_total, String item_id) {
+        this.cart_id = cart_id;
+        this.quantity = quantity;
+        this.item_total = item_total;
+        this.item_id = item_id;
     }
+
+
 
     public void setId(int id) {
         this.id = id;
     }
 
-    public int getCart_id() {
+    public Cart getCart_id() {
         return cart_id;
     }
 
-    public void setCart_id(int cart_id) {
+    public void setCart_id(Cart cart_id) {
         this.cart_id = cart_id;
     }
 
